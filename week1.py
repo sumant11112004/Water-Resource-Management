@@ -49,17 +49,17 @@ def eda(df: pd.DataFrame) -> None:
     plt.close()
 
 if __name__ == "__main__":
-    print("🔹 Loading data...")
+    print(" Loading data...")
     df = load_data(INPUT_FILE)
     print(df.head())
 
-    print("\n🔹 Preprocessing...")
+    print("\n Preprocessing...")
     df_clean = preprocess(df)
     print(df_clean.describe())
 
-    print("\n🔹 EDA plots...")
+    print("\n EDA plots...")
     eda(df_clean)
 
-    print("\n🔹 Saving cleaned dataset...")
+    print("\n Saving cleaned dataset...")
     df_clean.to_csv(OUTPUT_FILE, index=False)
-    print(f"✅ Saved {OUTPUT_FILE} and EDA images.")
+    print(f" Saved {OUTPUT_FILE} and EDA images.")
